@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flora - Flower Boutique</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#fffafc;
+      color:#333;
+    }
+
+    header{
+      width:100%;
+      height:100vh;
+      background:url('https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      color:white;
+      position:relative;
+    }
+
+    header::before{
+      content:"";
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      background:rgba(0,0,0,0.45);
+    }
+
+    .hero{
+      position:relative;
+      z-index:1;
+    }
+
+    .hero h1{
+      font-size:70px;
+      letter-spacing:4px;
+      margin-bottom:15px;
+    }
+
+    .hero p{
+      font-size:22px;
+      margin-bottom:25px;
+    }
+
+    .hero button{
+      padding:14px 35px;
+      border:none;
+      background:#ff4f81;
+      color:white;
+      font-size:18px;
+      border-radius:30px;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    .hero button:hover{
+      background:#e63e6f;
+    }
+
+    section{
+      padding:70px 8%;
+    }
+
+    .title{
+      text-align:center;
+      margin-bottom:50px;
+    }
+
+    .title h2{
+      font-size:40px;
+      color:#ff4f81;
+    }
+
+    .flowers{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:30px;
+    }
+
+    .card{
+      background:white;
+      border-radius:15px;
+      overflow:hidden;
+      box-shadow:0 5px 15px rgba(0,0,0,0.1);
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+    }
+
+    .card img{
+      width:100%;
+      height:280px;
+      object-fit:cover;
+    }
+
+    .card-content{
+      padding:20px;
+      text-align:center;
+    }
+
+    .card-content h3{
+      margin-bottom:10px;
+      color:#ff4f81;
+    }
+
+    .occasion{
+      background:#fff0f5;
+    }
+
+    .occasion-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
+    }
+
+    .occasion-box{
+      background:white;
+      padding:25px;
+      border-radius:15px;
+      text-align:center;
+      box-shadow:0 5px 12px rgba(0,0,0,0.08);
+    }
+
+    .occasion-box img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+      border-radius:12px;
+      margin-bottom:15px;
+    }
+
+    footer{
+      background:#ff4f81;
+      color:white;
+      text-align:center;
+      padding:20px;
+      margin-top:40px;
+    }
+
+    @media(max-width:768px){
+      .hero h1{
+        font-size:50px;
+      }
+
+      .hero p{
+        font-size:18px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <header>
+    <div class="hero">
+      <h1>FLORA</h1>
+      <p>Fresh Flowers for Every Beautiful Occasion</p>
+      <button>Explore Collection</button>
+    </div>
+  </header>
+
+  <!-- Flower Collection -->
+  <section>
+    <div class="title">
+      <h2>Our Flower Collection</h2>
+    </div>
+
+    <div class="flowers">
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1518895949257-7621c3c786d7?q=80&w=800&auto=format&fit=crop" alt="Rose">
+        <div class="card-content">
+          <h3>Red Roses</h3>
+          <p>Perfect symbol of love and romance.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1468327768560-75b778cbb551?q=80&w=800&auto=format&fit=crop" alt="Tulips">
+        <div class="card-content">
+          <h3>Tulips</h3>
+          <p>Elegant flowers for joyful celebrations.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=800&auto=format&fit=crop" alt="Sunflower">
+        <div class="card-content">
+          <h3>Sunflowers</h3>
+          <p>Bright flowers full of happiness and positivity.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Occasion Section -->
+  <section class="occasion">
+    <div class="title">
+      <h2>Flowers for Every Occasion</h2>
+    </div>
+
+    <div class="occasion-container">
+
+      <div class="occasion-box">
+        <img src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?q=80&w=800&auto=format&fit=crop" alt="Wedding Flowers">
+        <h3>Wedding</h3>
+        <p>Make your special day unforgettable with elegant floral arrangements.</p>
+      </div>
+
+      <div class="occasion-box">
+        <img src="https://images.unsplash.com/photo-1519378058457-4c29a0a2efac?q=80&w=800&auto=format&fit=crop" alt="Birthday Flowers">
+        <h3>Birthday</h3>
+        <p>Celebrate birthdays with colorful and fresh flower bouquets.</p>
+      </div>
+
+      <div class="occasion-box">
+        <img src="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?q=80&w=800&auto=format&fit=crop" alt="Anniversary Flowers">
+        <h3>Anniversary</h3>
+        <p>Express love and appreciation with romantic floral gifts.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Flora Flower Boutique | Designed with Love 🌸</p>
+  </footer>
+
+</body>
+</html>
